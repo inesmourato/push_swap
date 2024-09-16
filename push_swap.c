@@ -7,14 +7,14 @@
 
 /*
 
-[]declare pointers to 2 linked lists (stack a and b)
-        []set both pointers to NULL to avoid undefined behaviour and indicate im starting with empty stacks
+[X]declare pointers to 2 linked lists (stack a and b)
+        [X]set both pointers to NULL to avoid undefined behaviour and indicate im starting with empty stacks
 
-[] handle input count errors. Argc must be 2 or more and second inout must not be empty
-        []if input erros, return error
+[x] handle input count errors. Argc must be 2 or more and second input must not be empty
+        [x]if input erros, return error
 
-[] handle both cases of input (numbers & strings)
-        []if input is a string, call split to split the substrings
+[x] handle both cases of input (numbers & strings)
+        [x]if input is a string, call split to split the substrings
 
 [] initialize stack a by appending each input number as a node to stack a
         [] handle int overflow, duplicates and syntax errors (only contains digits, '-', '+')

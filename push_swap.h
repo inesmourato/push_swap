@@ -14,4 +14,21 @@ typedef struct s_stack_node
         int     cost;
         bool    above_median;
         bool    cheapest;
-}
+        struct  s_stack_node    *target_node;
+        struct  s_stack_node    *next;
+        struct  s_stack_node    *previous;       
+}        t_stack_node;
+
+//handle errors
+
+//stack init
+
+//nodes init
+
+//stack utils
+
+//commands
+
+//algorithms
+
+#endif
