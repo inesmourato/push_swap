@@ -11,8 +11,9 @@ int main(int argc, char **argv)
         if(argc < 2 || (argc == 2 && argv[1][0]))
                 return (1);
         else if(argc == 2)
-                argv = ft_split(argv[1], ' ');
-        init_stack_a();
+               argv = ft_split(argv[1], ' ');
+        init_stack_a(&a, argv);
+        print_stack(a);
         if(!stack_sorted(a))
         {
                 if(stack_len(a) == 2)
@@ -26,3 +27,42 @@ int main(int argc, char **argv)
         free_stack();
         return(0);
 }
+
+/*
+
+[X]declare pointers to 2 linked lists (stack a and b)
+        [X]set both pointers to NULL to avoid undefined behaviour and indicate im starting with empty stacks
+
+[x] handle input count errors. Argc must be 2 or more and second input must not be empty
+        [x]if input erros, return error
+
+[x] handle both cases of input (numbers & strings)
+        [x]if input is a string, call split to split the substrings
+
+[] initialize stack a by appending each input number as a node to stack a
+        [] handle int overflow, duplicates and syntax errors (only contains digits, '-', '+')
+                [] if errors found, free stack a and return error
+        [] check for each input, if it's a long integer
+                [] if input is a string convert it to a long int
+        [] append the nodes to satck a
+
+[] check if stack a is sorted
+        [] if not, implement the algorithm
+                [] check for 2 numbers
+                        [] if so, swap 
+                [] check for 3 numbers
+                        []if so, implement 'sort three' algorithm
+                [] check if more than 3 numbers
+                        [] if so, implement the Turk Algorithm
+
+
+
+util functions:
+- to handle errors
+- operations
+- stack lenght
+- last node
+- min and max nodes
+
+
+*/
