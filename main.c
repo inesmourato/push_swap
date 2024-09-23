@@ -3,10 +3,10 @@
 int main(int argc, char **argv)
 {
         t_stack_node    *a;
-        t_stack_node    *b;
+        /*t_stack_node    *b;*/
 
         a = NULL;
-        b = NULL;
+        //b = NULL;
 
         if(argc < 2 || (argc == 2 && argv[1][0]))
                 return (1);
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
                argv = ft_split(argv[1], ' ');
         init_stack_a(&a, argv);
         print_stack(a);
-        if(!stack_sorted(a))
+        /*if(!stack_sorted(a))
         {
                 if(stack_len(a) == 2)
                         swap numbers;
@@ -24,9 +24,10 @@ int main(int argc, char **argv)
                         turk algorithm;
                 
         }
-        free_stack();
+        free_stack();*/
         return(0);
 }
+
 
 /*
 

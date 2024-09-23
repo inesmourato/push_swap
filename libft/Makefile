@@ -41,8 +41,7 @@ SRC = ft_isalpha.c \
 	ft_putstr.c \
 	get_next_line_bonus.c \
 	get_next_line_utils_bonus.c \
-
-BONUS = ft_lstnew.c \
+	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
@@ -53,7 +52,6 @@ BONUS = ft_lstnew.c \
 	ft_lstmap.c
 
 OBJ = ${SRC:.c=.o}
-BONUS_OBJ = ${BONUS:.c=.o}	
 CFLAGS = -Wall -Werror -Wextra
 LIBC = ar rcs
 RM = rm -f

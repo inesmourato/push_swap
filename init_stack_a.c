@@ -1,7 +1,7 @@
 #include "push_swap.h"
 
 
-int	ft_atoi(const char *str)
+/*int	ft_atoi(const char *str)
 {
 	int	i;
 	int	number;
@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (number * parity);
-}
+}*/
 
 int is_valid_input(char *str)
 {
@@ -58,10 +58,10 @@ t_stack_node *create_node(int *num)
     t_stack_node    *new_node;
 
     if(!num)
-        error_exit();
+        error_exit("error");
     new_node = malloc(sizeof(t_stack_node));
     if(new_node == NULL)
-        error_exit();
+        error_exit("error");
     new_node->nbr = *num;
     new_node->next = NULL;
     new_node->prev = NULL;
@@ -97,15 +97,15 @@ void init_stack_a(t_stack_node **a, char **argv)
     {
         if(!is_valid_input(argv[i]))
         {
-            free_stack(a);
-            error_exit();
+            free_stack(*a);
+            error_exit("error");
              exit(1);
         }
         num = ft_atoi(argv[i]);
         if(has_duplicates(*a, num))
         {
-           free_stack(a);
-           error_exit();
+           free_stack(*a);
+           error_exit("error");
         }
         new_node = create_node(&num);
         append_to_stack(a, new_node);
@@ -119,6 +119,7 @@ void print_stack(t_stack_node *stack)
     while (stack != NULL)
     {
         printf("%d ", stack->nbr);
+        
         stack = stack->next;
     }
     printf("\n");

@@ -1,11 +1,12 @@
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
 
+#include "libft/libft.h"
 #include <stdlib.h>
 #include <limits.h>
 #include <stdbool.h>
 #include <unistd.h>
-#include "libft/libft.h"
+
 
 typedef struct s_stack_node
 {
@@ -27,6 +28,8 @@ void init_stack_a(t_stack_node **a, char **argv);
 void print_stack(t_stack_node *stack);
 
 //handle errors
+void free_stack(t_stack_node *stack);
+void error_exit(const char *message);
 
 //stack init
 
