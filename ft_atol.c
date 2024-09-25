@@ -1,8 +1,5 @@
 #include "push_swap.h"
 
-PROVAVELMENTE NAO VOU USAR!!!
-
-
 long ft_atol (const char *str)
 {
     long result;
@@ -26,7 +23,7 @@ long ft_atol (const char *str)
     {
         if(result > LONG_MAX / 10 || (result == LONG_MAX / 10 && (str[i] - 48) > LONG_MAX % 10))
         {
-            if(sign = 1)
+            if(sign == 1)
                 return(LONG_MAX);
             else   
                 return(LONG_MIN);

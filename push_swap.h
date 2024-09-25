@@ -26,11 +26,11 @@ t_stack_node *create_node(int *num);
 void append_to_stack(t_stack_node **stack, t_stack_node *new_node);
 void init_stack_a(t_stack_node **a, char **argv);
 void print_stack(t_stack_node *stack);
+long ft_atol (const char *str);
 
 //handle errors
 void free_stack(t_stack_node *stack);
-void error_exit(const char *message);
-
+void error_exit(void);
 //stack init
 
 //nodes init
