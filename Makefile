@@ -15,6 +15,8 @@ SRC= main.c \
 	free_stack.c \
 	error_exit.c \
 	ft_atol.c \
+	ft_split_ps.c \
+	stack_is_sorted.c \
 
 OBJS = ${SRC:.c=.o}
 

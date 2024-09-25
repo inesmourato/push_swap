@@ -50,9 +50,7 @@ void	append_to_stack(t_stack_node **stack, int content)
 	new_node = create_node(content);
 	temp = *stack;
 	if (*stack == NULL)
-	{
 		*stack = new_node;
-	}
 	else
 	{
 		while (temp->next)

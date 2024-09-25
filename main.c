@@ -3,17 +3,21 @@
 int main(int argc, char **argv)
 {
         t_stack_node    *a;
-        /*t_stack_node    *b;*/
+        //t_stack_node    *b;
 
         a = NULL;
         //b = NULL;
         if(argc < 2 || (argc == 2 && !argv[1][0]))
                 return (1);
-        //else if(argc == 2)
-        //       argv = ft_split(argv[1], ' ');
+        else if(argc == 2)
+              argv = ft_split_ps(&argv[1], ' ');
         init_stack_a(&a, argv);
         print_stack(a);
-        /*if(!stack_sorted(a))
+        if(!stack_is_sorted(a))
+                printf("yes");
+        else
+                printf("no");
+        if(!stack_sorted(a))
         {
                 if(stack_len(a) == 2)
                         swap numbers;
@@ -30,7 +34,8 @@ int main(int argc, char **argv)
 
 /*
 
-[X]declare pointers to 2 linked lists (stack a and b)
+[X]declare pointers 	printf("append to stack feito");
+to 2 linked lists (stack a and b)
         [X]set both pointers to NULL to avoid undefined behaviour and indicate im starting with empty stacks
 
 [x] handle input count errors. Argc must be 2 or more and second input must not be empty

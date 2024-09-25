@@ -27,6 +27,11 @@ void append_to_stack(t_stack_node **stack, int content);
 void init_stack_a(t_stack_node **a, char **argv);
 void print_stack(t_stack_node *stack);
 long ft_atol (const char *str);
+int stack_is_sorted(t_stack_node *stack);
+
+//split function
+char	**ft_split_ps(char **s, char c);
+
 
 //handle errors
 void free_stack(t_stack_node *stack);
