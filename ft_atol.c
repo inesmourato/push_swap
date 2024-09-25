@@ -21,14 +21,12 @@ long ft_atol (const char *str)
         i++;
     while(str[i] >= '0' && str[i] <= '9')
     {
-        if(result > LONG_MAX / 10 || (result == LONG_MAX / 10 && (str[i] - 48) > LONG_MAX % 10))
-        {
-            if(sign == 1)
-                return(LONG_MAX);
-            else   
-                return(LONG_MIN);
-        }
         result = result * 10 + str[i] - 48;
+        if(result * sign > INT_MAX || result * sign < INT_MIN)
+        {
+                error_exit();
+        }
+        
         i++;
     }
     return(result * sign);
