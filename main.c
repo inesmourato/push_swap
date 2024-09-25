@@ -17,9 +17,9 @@ int main(int argc, char **argv)
                 printf("yes");
         else
                 printf("no");
-        if(!stack_sorted(a))
+        if(!stack_is_sorted(a))
         {
-                if(stack_len(a) == 2)
+                if(ft_lstsize(a) == 2)
                         swap numbers;
                 else if(stack_len == 3)
                         sort_three algorithm;
