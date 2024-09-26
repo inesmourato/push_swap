@@ -7,7 +7,7 @@ void free_stack(t_stack_node *stack)
     while(stack)
     {
         temp = stack;
-        stack = stack -> next;
         free(temp);
+        stack = stack -> next;
     }
 }

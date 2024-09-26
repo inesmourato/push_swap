@@ -10,13 +10,13 @@ LIBFT = $(LIBFT_DIR)/libft.a
 RM = rm -f
 
 SRC= main.c \
-	push_swap.c \
 	init_stack_a.c \
 	free_stack.c \
 	error_exit.c \
 	ft_atol.c \
 	ft_split_ps.c \
 	stack_is_sorted.c \
+	swap.c \
 
 OBJS = ${SRC:.c=.o}
 

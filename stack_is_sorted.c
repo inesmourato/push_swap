@@ -2,16 +2,16 @@
 
 int stack_is_sorted(t_stack_node *stack)
 {
-        int data = stack->nbr;
-        int next_data = stack->next->nbr;
-        
+        t_stack_node    *temp;
+
+        temp = stack; 
         if(!stack || !stack->next)
                 return(1);
-        while(stack->next)
+        while(stack)
         {
-                if(data > next_data)
+                if(stack->nbr > stack->next->nbr)
                         return(0); 
-                stack = stack -> next;
+                stack = stack->next;
         }
         return(1);
 }

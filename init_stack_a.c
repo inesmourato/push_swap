@@ -42,24 +42,24 @@ t_stack_node	*create_node(int num)
 	return (new_node);
 }
 
-void	append_to_stack(t_stack_node **stack, int content)
+void	append_to_stack(t_stack_node *stack, int content)
 {
 	t_stack_node	*new_node;
 	t_stack_node	*temp;
 
 	new_node = create_node(content);
-	temp = *stack;
-	if (*stack == NULL)
-		*stack = new_node;
+	temp = stack;
+	if (stack == NULL)
+		stack = new_node;
 	else
 	{
 		while (temp->next)
 			temp = temp->next;
 		temp->next = new_node;
-	}
+        }
 }
 
-void	init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node  *a, char **argv)
 {
 	int				i;
 	int				num;
@@ -70,13 +70,13 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	{
 		if (!is_valid_input(argv[i]))
 		{
-			free_stack(*a);
+			free_stack(a);
 			error_exit();
 		}
 		num = ft_atol(argv[i]);
-		if (has_duplicates(*a, num))
+		if (has_duplicates(a, num))
 		{
-			free_stack(*a);
+			free_stack(a);
 			error_exit();
 		}
 		new_node = create_node(num);
@@ -87,10 +87,13 @@ void	init_stack_a(t_stack_node **a, char **argv)
 
 void	print_stack(t_stack_node *stack)
 {
-	while (stack != NULL)
+        t_stack_node *temp;
+
+        temp = stack;
+	while (temp != NULL)
 	{
-		printf("%d ", stack->nbr);
-		stack = stack->next;
+		printf("%d ", temp->nbr);
+		temp = temp->next;
 	}
 	printf("\n");
 }
