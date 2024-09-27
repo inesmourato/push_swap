@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	is_valid_input(char *str)
+int	is_digit(char *str)
 {
 	int	i;
 
@@ -42,41 +42,43 @@ t_stack_node	*create_node(int num)
 	return (new_node);
 }
 
-void	append_to_stack(t_stack_node *stack, int content)
+void	append_to_stack(t_stack_node **stack, int content)
 {
 	t_stack_node	*new_node;
 	t_stack_node	*temp;
 
 	new_node = create_node(content);
-	temp = stack;
-	if (stack == NULL)
-		stack = new_node;
+	
+	if (*stack == NULL)
+		*stack = new_node;
 	else
 	{
+                temp = *stack;
 		while (temp->next)
 			temp = temp->next;
 		temp->next = new_node;
+                new_node->prev = temp;
         }
 }
 
-void	init_stack_a(t_stack_node  *a, char **argv)
+void	init_stack_a(t_stack_node  **a, char **argv)
 {
 	int				i;
 	int				num;
 	t_stack_node	*new_node;
 
-	i = 1;
+	i = 0;
 	while (argv[i] != NULL)
 	{
-		if (!is_valid_input(argv[i]))
+		if (!is_digit(argv[i]))
 		{
-			free_stack(a);
+			free_stack(*a);
 			error_exit();
 		}
 		num = ft_atol(argv[i]);
-		if (has_duplicates(a, num))
+		if (has_duplicates(*a, num))
 		{
-			free_stack(a);
+			free_stack(*a);
 			error_exit();
 		}
 		new_node = create_node(num);

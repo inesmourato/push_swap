@@ -2,30 +2,28 @@
 
 int main(int argc, char **argv)
 {
-        t_stack_node    a;
+        t_stack_node    *a = NULL;
         //t_stack_node    *b;
-
         //b = NULL;
-        free_stack(&a);
+        //free_stack(&a);
         if(argc < 2 || (argc == 2 && !argv[1][0]))
                 return (1);
         else if(argc == 2)
-              argv = ft_split_ps(&argv[1], ' ');
+              argv = ft_split(argv[1], ' ');
         init_stack_a(&a, argv);
-        //print_stack(&a);
-        if(stack_is_sorted(&a) == 0)
+        print_stack(a);
+        if(stack_is_sorted(a) == 1)
                 printf("stack is sorted");
         else
                 printf("stack is not sorted");
-        if(!stack_is_sorted(&a))
+        if(!stack_is_sorted(a))
         {
                 //if(lstsize(a) == 2)
                        // sa(&a);
                 /*else if(stack_len == 3)
                         sort_three algorithm;
                 else
-                        turk algorithm;*/
-                
+                        turk algorithm;*/ 
         }
         //free_stack();
         return(0);
