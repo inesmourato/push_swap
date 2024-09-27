@@ -65,7 +65,6 @@ void	init_stack_a(t_stack_node  **a, char **argv, int argv_index)
 {
 	int				i;
 	int				num;
-	t_stack_node	*new_node;
 
 	i = argv_index;
 	while (argv[i] != NULL)
@@ -81,7 +80,6 @@ void	init_stack_a(t_stack_node  **a, char **argv, int argv_index)
 			free_stack(*a);
 			error_exit();
 		}
-		new_node = create_node(num);
 		append_to_stack(a, num);
 		i++;
 	}

@@ -30,7 +30,7 @@ void init_stack_a(t_stack_node **a, char **argv, int argv_index);
 void print_stack(t_stack_node *stack);
 long ft_atol (const char *str);
 int stack_is_sorted(t_stack_node *stack);
-int	lstsize(t_stack_node **lst);
+int stack_size(t_stack_node **lst);
 
 //handle errors
 void free_stack(t_stack_node *stack);
@@ -42,8 +42,8 @@ void error_exit(void);
 //stack utils
 
 //commands
-void swap(t_stack_node **stack);
-void sa(t_stack_node **stack_a);
+void swap(t_stack_node **stack, char c);
+
 
 
 //algorithms

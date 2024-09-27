@@ -4,6 +4,7 @@ int main(int argc, char **argv)
 {
         t_stack_node    *a = NULL;
         int argv_index;
+        int size;
 
         argv_index = 1;
         //t_stack_node    *b;
@@ -19,14 +20,18 @@ int main(int argc, char **argv)
         init_stack_a(&a, argv, argv_index);
         print_stack(a);
         if(stack_is_sorted(a) == 1)
-                printf("stack is sorted");
+                printf("stack is sorted\n");
         else
-                printf("stack is not sorted");
-        if(!stack_is_sorted(a))
+                printf("stack is not sorted\n");
+        size = stack_size(&a);
+        if(stack_is_sorted(a) == 0)
         {
-                //if(lstsize(a) == 2)
-                       // sa(&a);
-                /*else if(stack_len == 3)
+                if(size == 2)
+                {
+                        swap(&a, 'a');
+                        print_stack(a);
+                }       
+                else if(size == 3)
                         sort_three algorithm;
                 else
                         turk algorithm;*/ 

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void swap(t_stack_node **stack)
+void swap (t_stack_node **stack, char c)
 {
         t_stack_node *temp;
 
@@ -10,26 +10,16 @@ void swap(t_stack_node **stack)
         *stack = (*stack)->next;
         temp->next = (*stack)->next;
         (*stack)->next = temp;
+		if(c == 'a')
+			write(1, "sa\n", 3);
+		else if (c == 'b')
+			write(1, "sb\n", 3);
+		
 }
 
-void sa(t_stack_node **stack_a)
+/*void ss(t_stack_node **stack_a)
 {
         swap(stack_a);
-        write(1, "sa\n", 3);
-}
-
-
-int	lstsize(t_stack_node **stack)
-{
-	int	counter;
-
-	counter = 0;
-	if (!stack)
-		error_exit();
-	while ((*stack))
-	{
-		*stack = (*stack)->next;
-		counter++;
-	}
-	return (counter);
-}
+		swap(stack_b);
+        write(1, "ss\n", 3);
+}*/

@@ -11,11 +11,8 @@ RM = rm -f
 
 SRC= main.c \
 	init_stack_a.c \
-	free_stack.c \
-	error_exit.c \
-	ft_atol.c \
-	stack_is_sorted.c \
 	swap.c \
+	utils.c \
 
 OBJS = ${SRC:.c=.o}
 
