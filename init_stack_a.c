@@ -61,13 +61,13 @@ void	append_to_stack(t_stack_node **stack, int content)
         }
 }
 
-void	init_stack_a(t_stack_node  **a, char **argv)
+void	init_stack_a(t_stack_node  **a, char **argv, int argv_index)
 {
 	int				i;
 	int				num;
 	t_stack_node	*new_node;
 
-	i = 0;
+	i = argv_index;
 	while (argv[i] != NULL)
 	{
 		if (!is_digit(argv[i]))

@@ -3,14 +3,20 @@
 int main(int argc, char **argv)
 {
         t_stack_node    *a = NULL;
+        int argv_index;
+
+        argv_index = 1;
         //t_stack_node    *b;
         //b = NULL;
-        //free_stack(&a);
+
         if(argc < 2 || (argc == 2 && !argv[1][0]))
                 return (1);
         else if(argc == 2)
-              argv = ft_split(argv[1], ' ');
-        init_stack_a(&a, argv);
+        {
+                argv = ft_split(argv[1], ' ');
+                argv_index = 0;
+        }     
+        init_stack_a(&a, argv, argv_index);
         print_stack(a);
         if(stack_is_sorted(a) == 1)
                 printf("stack is sorted");

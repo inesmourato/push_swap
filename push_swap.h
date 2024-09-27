@@ -25,7 +25,7 @@ int is_digit(char *str);
 int has_duplicates(t_stack_node *stack, int num);
 t_stack_node *create_node(int num);
 void append_to_stack(t_stack_node **stack, int content);
-void init_stack_a(t_stack_node **a, char **argv);
+void init_stack_a(t_stack_node **a, char **argv, int argv_index);
 
 void print_stack(t_stack_node *stack);
 long ft_atol (const char *str);
