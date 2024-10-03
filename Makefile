@@ -16,6 +16,7 @@ SRC= main.c \
 	push.c \
 	reverse_rotate.c \
 	rotate.c \
+	sort3.c \
 
 OBJS = ${SRC:.c=.o}
 

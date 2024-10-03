@@ -20,7 +20,7 @@ void	reverse_rotate(t_stack_node **stack, char c)
         last->next = *stack;
         *stack = last;
         if(c == 'a')
-		write(1, "rra\n", 3);
+		write(1, "rra\n", 4);
 	else if (c == 'b')
-		write(1, "rrb\n", 3);
+		write(1, "rrb\n", 4);
 }

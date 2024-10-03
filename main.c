@@ -33,11 +33,11 @@ int main(int argc, char **argv)
                 }       
                 else if(size == 3)
                 {
-                        rotate(&a, 'a');
                         print_stack(a);
-                        //sort_three algorithm;
+                        sort3(&a);
+                        print_stack(a);
                 }
-                // else
+                //else
                 //         turk algorithm;*/ 
         }
         //free_stack();

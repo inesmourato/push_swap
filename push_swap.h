@@ -49,5 +49,6 @@ void					reverse_rotate(t_stack_node **stack, char c);
 void					rotate(t_stack_node **stack, char c);
 
 // algorithms
+t_stack_node sort3 (t_stack_node **stack);
 
 #endif
