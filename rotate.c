@@ -19,3 +19,10 @@ void rotate(t_stack_node **stack, char c)
 	else if (c == 'b')
 		write(1, "rb\n", 3);
 }
+
+// void rr (t_stack_node **stack)
+// {
+//         rotate(stack, 'a');
+//         rotate(stack, 'b');
+//         write(1, "rr\n", 3);
+// }

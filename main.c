@@ -37,13 +37,13 @@ int main(int argc, char **argv)
                         sort3(&a);
                         print_stack(a);
                 }
-                //else
+                else
                 //         turk algorithm;*/ 
         }
         //free_stack();
         return(0);
 }
-
+ikuyguykugh
 
 /*
 

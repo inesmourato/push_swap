@@ -24,3 +24,10 @@ void	reverse_rotate(t_stack_node **stack, char c)
 	else if (c == 'b')
 		write(1, "rrb\n", 4);
 }
+
+// void rrr (t_stack_node **stack)
+// {
+//         reverse_rotate(stack, 'a');
+//         reverse_rotate(stack, 'b');
+//         write(1, "rrr\n", 4);
+// }
