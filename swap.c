@@ -10,10 +10,10 @@ void swap (t_stack_node **stack, char c)
         *stack = (*stack)->next;
         temp->next = (*stack)->next;
         (*stack)->next = temp;
-		if(c == 'a')
-			write(1, "sa\n", 3);
-		else if (c == 'b')
-			write(1, "sb\n", 3);
+	if(c == 'a')
+		write(1, "sa\n", 3);
+	else if (c == 'b')
+		write(1, "sb\n", 3);
 		
 }
 

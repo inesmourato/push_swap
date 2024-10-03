@@ -7,8 +7,8 @@ int main(int argc, char **argv)
         int size;
 
         argv_index = 1;
-        //t_stack_node    *b;
-        //b = NULL;
+        t_stack_node    *b;
+        b = NULL;
 
         if(argc < 2 || (argc == 2 && !argv[1][0]))
                 return (1);
@@ -32,9 +32,13 @@ int main(int argc, char **argv)
                         print_stack(a);
                 }       
                 else if(size == 3)
-                        sort_three algorithm;
-                else
-                        turk algorithm;*/ 
+                {
+                        rotate(&a, 'a');
+                        print_stack(a);
+                        //sort_three algorithm;
+                }
+                // else
+                //         turk algorithm;*/ 
         }
         //free_stack();
         return(0);

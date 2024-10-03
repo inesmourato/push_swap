@@ -13,6 +13,9 @@ SRC= main.c \
 	init_stack_a.c \
 	swap.c \
 	utils.c \
+	push.c \
+	reverse_rotate.c \
+	rotate.c \
 
 OBJS = ${SRC:.c=.o}
 
