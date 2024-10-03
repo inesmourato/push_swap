@@ -14,7 +14,10 @@ t_stack_node	sort3(t_stack_node **stack)
 	else if ((first->nbr > last->nbr) && (first->next->nbr > first->nbr))
 		reverse_rotate(stack, 'a');
 	else if ((first->nbr < last->nbr) && (last->nbr < first->next->nbr))
-		rotate(stack, 'a');
+	{
+		swap(stack, 'a');
+        	rotate(stack, 'a');
+        }
 	else if ((first->nbr > last->nbr) && (first->nbr > first->next->nbr)
 		&& (last->nbr < first->next->nbr))
 	{
@@ -22,9 +25,6 @@ t_stack_node	sort3(t_stack_node **stack)
 		reverse_rotate(stack, 'a');
 	}
 	else
-	{
-		reverse_rotate(stack, 'a');
-		reverse_rotate(stack, 'a');
-	}
+	        rotate(stack, 'a');
 	return (**stack);
 }
