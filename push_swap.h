@@ -52,4 +52,7 @@ void					push_a(t_stack_node **stack_a, t_stack_node **stack_b);
 // algorithms
 t_stack_node			sort3(t_stack_node **stack);
 
+t_stack_node *target_node (t_stack_node *stack_a, t_stack_node *stack_b);
+
+
 #endif

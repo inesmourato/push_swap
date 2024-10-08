@@ -6,6 +6,9 @@ int	main(int argc, char **argv)
 	int				argv_index;
 	int				size;
 	t_stack_node	*b;
+        t_stack_node    *test;
+
+        test = NULL;
 
 	a = NULL;
 	argv_index = 1;
@@ -51,7 +54,9 @@ int	main(int argc, char **argv)
                         push_b(&a, &b);
                         print_stack(b);
 			print_stack(a);
-                        target_node(a, b);
+                        target_node(&a, &b);
+                        test = target_node;
+                        printf("%d", test->nbr);
 		}
 	}
 	// free_stack();

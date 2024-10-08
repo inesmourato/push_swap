@@ -17,6 +17,7 @@ SRC= main.c \
 	reverse_rotate.c \
 	rotate.c \
 	sort3.c \
+	target_node.c \
 
 OBJS = ${SRC:.c=.o}
 
