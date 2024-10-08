@@ -1,12 +1,23 @@
 #include "push_swap.h"
 
-// void turk_algorithm (t_stack_node *stack_a, t_stack_node *stack_b)
-// {
-//       if(ft_lstsize(stack_a) > 3)
-//       {
-//         push()
-//       }  
-// }
+void turk_algorithm (t_stack_node **stack_a, t_stack_node **stack_b)
+{
+        int counter;
+        int size;
+
+        size = ft_lstsize(*stack_a);
+
+      while(size > 3)
+      {
+        push_b(&stack_a, &stack_b);
+        size--;
+        push_b(&stack_a, &stack_b);
+        size--;
+        
+        counter = 0;
+      }  
+      e
+}
 
 
 
