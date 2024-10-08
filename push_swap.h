@@ -46,8 +46,8 @@ void					swap(t_stack_node **stack, char c);
 void					reverse_rotate(t_stack_node **stack, char c);
 void					rotate(t_stack_node **stack, char c);
 
-static void					push_b(t_stack_node **stack_a, t_stack_node **stack_b);
-static void					push_a(t_stack_node **stack_a, t_stack_node **stack_b);
+void					push_b(t_stack_node **stack_a, t_stack_node **stack_b);
+void					push_a(t_stack_node **stack_a, t_stack_node **stack_b);
 
 // algorithms
 t_stack_node			sort3(t_stack_node **stack);

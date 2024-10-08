@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static void	push_a(t_stack_node **stack_a, t_stack_node **stack_b)
+ void	push_a(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	t_stack_node	*temp;
 
@@ -14,15 +14,15 @@ static void	push_a(t_stack_node **stack_a, t_stack_node **stack_b)
 	}
 	else
 	{
-		temp = *stack_a;
-		*stack_a = (*stack_a)->next;
+		temp = *stack_b;
+		*stack_b = (*stack_b)->next;
 		temp->next = *stack_a;
-		*stack_b = temp;
+		*stack_a = temp;
 	}
 	write(1, "pa\n", 3);
 }
 
-static void	push_b(t_stack_node **stack_a, t_stack_node **stack_b)
+ void	push_b(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	t_stack_node *temp;
 
@@ -36,10 +36,10 @@ static void	push_b(t_stack_node **stack_a, t_stack_node **stack_b)
 	}
 	else
 	{
-		temp = *stack_b;
-		*stack_b = (*stack_b)->next;
+		temp = *stack_a;
+		*stack_a = (*stack_a)->next;
 		temp->next = *stack_b;
-		*stack_a = temp;
+		*stack_b = temp;
 	}
 	write(1, "pb\n", 3);
 }

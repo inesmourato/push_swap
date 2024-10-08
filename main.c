@@ -45,9 +45,9 @@ int	main(int argc, char **argv)
 			push_b(&a, &b);
                         print_stack(b);
 			print_stack(a);
-			push_b(&b, &a);
+			push_a(&a, &b);
+                        print_stack(b);
 			print_stack(a);
-			print_stack(b);
 		}
 	}
 	// free_stack();
