@@ -1,5 +1,12 @@
 #include "push_swap.h"
 
+//void turk_algorithm (t_stack_node *stack_a, t_stack_node *stack_b)
+{
+      if(ft_lstsize(stack_a) > 3)
+      {
+        push()
+      }  
+}
 
 
 
@@ -12,7 +19,7 @@
 /*
 []if the pushing number is either MAX ot MIN it should be placed above the old biggest number
 
-[]make the rrr and rr fucntions
+[]make the rrr and rr functions
 
 start:
 [] condition: it will push numbers until there are only 3 nodes in stack a (if it has 4 nodes only pushes once)

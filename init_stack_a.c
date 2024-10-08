@@ -101,7 +101,7 @@ void	print_stack(t_stack_node *stack)
 /*
 [X] check if input is valid
 [X] str to long
-[] check duplicates
-[] create nodes
-[] free stack for errors
+[X] check duplicates
+[X] create nodes
+[X] free stack for errors
 */

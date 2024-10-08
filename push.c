@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	push(t_stack_node **stack_a, t_stack_node **stack_b, char c)
+void	push_a (t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	t_stack_node *temp;
 
@@ -11,8 +11,19 @@ void	push(t_stack_node **stack_a, t_stack_node **stack_b, char c)
 	*stack_a = (*stack_a)->next;
 	temp->next = *stack_b;
 	*stack_b = temp;
-	if (c == 'a')
-		write(1, "pa\n", 3);
-	else if (c == 'b')
-		write(1, "pb\n", 3);
+	write(1, "pa\n", 3);
+}
+
+void	push_b (t_stack_node **stack_a, t_stack_node **stack_b)
+{
+	t_stack_node *temp;
+
+	if (!stack_b || !*stack_b)
+		error_exit();
+
+	temp = *stack_b;
+	*stack_b = (*stack_b)->next;
+	temp->next = *stack_a;
+	*stack_a = temp;
+	write(1, "pb\n", 3);
 }

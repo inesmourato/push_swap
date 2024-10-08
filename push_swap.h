@@ -19,6 +19,7 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }						t_stack_node;
 
+
 // init_stack
 int						is_digit(char *str);
 int						has_duplicates(t_stack_node *stack, int num);
@@ -43,10 +44,11 @@ void					error_exit(void);
 
 // commands
 void					swap(t_stack_node **stack, char c);
-void					push(t_stack_node **stack_a, t_stack_node **stack_b,
-							char c);
 void					reverse_rotate(t_stack_node **stack, char c);
 void					rotate(t_stack_node **stack, char c);
+
+void	push_b (t_stack_node **stack_a, t_stack_node **stack_b);
+void	push_a (t_stack_node **stack_a, t_stack_node **stack_b);
 
 // algorithms
 t_stack_node sort3 (t_stack_node **stack);

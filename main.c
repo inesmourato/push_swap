@@ -38,12 +38,12 @@ int main(int argc, char **argv)
                         print_stack(a);
                 }
                 else
+                        push_b(a, b);
                 //         turk algorithm;*/ 
         }
         //free_stack();
         return(0);
 }
-ikuyguykugh
 
 /*
 
