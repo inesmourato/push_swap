@@ -15,6 +15,7 @@ void turk_algorithm (t_stack_node **stack_a, t_stack_node **stack_b)
         size--;
         
         counter = 0;
+        target_node(&stack_a, stack_b);
       }  
       e
 }

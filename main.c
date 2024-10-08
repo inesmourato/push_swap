@@ -45,9 +45,13 @@ int	main(int argc, char **argv)
 			push_b(&a, &b);
                         print_stack(b);
 			print_stack(a);
-			push_a(&a, &b);
+			push_b(&a, &b);
                         print_stack(b);
 			print_stack(a);
+                        push_b(&a, &b);
+                        print_stack(b);
+			print_stack(a);
+                        target_node(a, b);
 		}
 	}
 	// free_stack();
